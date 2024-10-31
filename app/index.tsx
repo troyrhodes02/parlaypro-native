@@ -12,18 +12,12 @@ export default function SplashScreen() {
       <View style={styles.imageContainer}>
         <Image style={styles.image} source={Logo} />
         <CustomText style={styles.greeting}>Welcome to ParlayPro!</CustomText>
-        <CustomText style={styles.blurb}>Ready to start Winning?</CustomText>
+        <CustomText style={styles.blurb}>Ready to Start Winning?</CustomText>
         <TouchableOpacity
-          style={styles.signUpButton}
+          style={styles.getStartedButton}
           onPress={() => router.push("/authentication/SignUpScreen")}
         >
-          <CustomText style={styles.signUpButtonText}>Sign-Up</CustomText>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.loginButton}
-          onPress={() => router.push("/authentication/LoginScreen")}
-        >
-          <CustomText style={styles.loginButtonText}>Login</CustomText>
+          <CustomText style={styles.getStartedButtonText}>Get Started</CustomText>
         </TouchableOpacity>
       </View>
     </ScrollView>
@@ -56,7 +50,7 @@ const styles = StyleSheet.create({
     fontSize: bu(20),
     paddingBottom: bu(100),
   },
-  signUpButton: {
+  getStartedButton: {
     alignItems: "center",
     justifyContent: "center",
     borderRadius: bu(10),
@@ -65,21 +59,8 @@ const styles = StyleSheet.create({
     height: bu(45),
     marginBottom: bu(10),
   },
-  loginButton: {
-    alignItems: "center",
-    justifyContent: "center",
-    borderRadius: bu(10),
-    backgroundColor: "white",
-    width: "100%",
-    height: bu(45),
-    marginBottom: bu(10),
-  },
-  signUpButtonText: {
+  getStartedButtonText: {
     color: "white",
-    fontSize: bu(14),
-  },
-  loginButtonText: {
-    color: "#e8601d",
-    fontSize: bu(14),
+    fontSize: bu(15),
   },
 });
